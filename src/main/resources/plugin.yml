@@ -1,15 +1,18 @@
-name: EventPlugin
-version: 1.0.0
+name: EventoPlugin
+version: 1.21.11-26
 main: com.enderdevelopment.plugin.Main
 author: EnderDevelopment
-description: Um plugin de evento para Minecraft
 api-version: "1.21"
 commands:
   evento:
-    description: Comando para gerenciar eventos
-    usage: /evento <criar|iniciar|finalizar>
-    permission: eventplugin.evento
+    description: Gerencia eventos no servidor.
+    usage: /evento <criar|iniciar|finalizar|listar|participar>
+    permission: evento.admin
+    permission-message: Você não tem permissão para usar este comando.
 permissions:
-  eventplugin.evento:
-    description: Permissão para usar o comando de evento
+  evento.admin:
+    description: Permite gerenciar eventos.
     default: op
+  evento.participar:
+    description: Permite participar de eventos.
+    default: true
